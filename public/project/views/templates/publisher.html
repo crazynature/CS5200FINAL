@@ -1,0 +1,22 @@
+<div  ng-include="'views/templates/footer-explore.html'"></div>
+<div ng-include="'views/templates/header.html'"></div>
+<div id="explore-back"><a href="#!/home"><span class="glyphicon glyphicon-arrow-left"></span></a></div>
+<div class="user-home container-fluid ">
+    <div class="container-fluid">
+        <h2>Publishers</h2>
+        <ul class="list-group list-div active">
+            <li ng-repeat="publisher in model.publishers" class="list-group-item">
+                <div class="row">
+                    <div class="book-info-div">
+                        <div>
+                            <label class="explore-label">Name:</label><span></span>
+                            <a href="#!/publisher/{{publisher._id}}"
+                               class="book-name">{{publisher.username}}</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+
+<div class="container-fluid newBooklist">
+    <div class="alert " ng-show="model.errorMessage !== '1'">
+        <span class="closebtn" ng-click="model.defaultMessage()">&times;</span>
+        {{model.errorMessage}}
+    </div>
+    <label for="name">Name</label>
+    <input name="name"
+           placeholder="Name"
+           ng-model="model.booklist.name"
+           type="text"
+           class="form-control"
+           id="name"/>
+    <label for="description">Description</label>
+    <textarea name="description"
+              ng-model = "model.booklist.description"
+              rows="5"
+              placeholder="Description"
+              class="form-control"
+              id="description"></textarea>
+    <label for="share">Sharable</label>
+    <select ng-model="model.share"
+            class="form-control" id="share">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+
+
+    <a ng-click="model.createBooklistForUser(model.booklist, model.booklist.name, model.booklist.description)"
+       class="btn btn-default btn-success btn-block">Create</a>
+    <!--<a href="#!/home" class="btn btn-danger black-btn btn-block">Cancel</a>-->
+
+</div>
